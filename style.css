@@ -1,0 +1,55 @@
+.title {
+	padding-bottom: 10px;
+}
+.face{
+float: left;
+padding-top: 50px;
+padding-left: 80px;
+width:523px;
+height:278px;
+border: 1px solid black;
+position:absolute;
+
+}
+.logo{
+	float: right;
+	width:500px;
+	height:328px;
+	padding-right: 300px;
+	border:1px solid black;
+}	
+
+}
+h1{
+	text-align: right;
+	padding-top: 134px;
+	padding-right: 220px;
+	margin:0 auto;
+}
+.words{
+	padding-top:350px;
+	text-align: left;
+	display: block;
+	height: 200px;
+}
+.story{
+	top: 85%;
+	text-align: center;
+	border-top: 1px solid black;
+
+}
+
+.wrap{
+	border:2px solid black;
+}
+body{
+	margin: 0px;
+	padding:0px;
+}
+
+.label{
+	text-align: right;
+	padding-right: 10px;
+}
+.button { cursor: pointer; margin: 10px; padding: 10px; border: 1px solid black; width: 100px; }
+.button:hover { border: 1px solid green; }
