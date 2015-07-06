@@ -5,47 +5,52 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
     <script data-require="angular.js@1.3.10" data-semver="1.3.10" src="https://code.angularjs.org/1.3.10/angular.js"></script>
     <script src="script.js"></script>
-	<title>D</title>
+	<title>Madlibs!</title>
 </head>
 <body>
 	<div class="wrap">
-	  <div class="face">
+        <div class="header">
+	     
 		   <img src="img/smile.png">
-      </div>
-      <div class="logo">
+         
+         
    	     <img src="img/madlib.png">
    	     <h1>Don't Stop Madlibbin'!</h1>
-      </div>
-
+         </div>
        	
 		
 	  
 
 	  <div class="input{{inputVisable}}">
+	  	<input type="radio" ng model="gender" value="male"ng-click="male()">Male name</input>
+       	<input type="radio" ng model="gender" value="female"ng-click="female()">Female name</div>
+
+
 	  	<h2> Please Provide the following words</h2>
-	  	<table>
-	       
-	       <tr><td class="label">Name</td><td class="input"><input type="text" ng-model="female_name"></td>
-	       <td class="label">Adjective</td>  <td class="input"><input type="text" ng-model="adjective"></td> 
-	       <td class="label">Time </td>      <td class="input"><input type="text" ng-model="time_of_day"></td></tr> 
-	       <tr><td class="label">Destination</td><td class="input"><input type="text" ng-model="destination"></td> 
-	       <td class="label">Location</td>   <td class="input"><input type="text" ng-model="location"></td> 
-	       <td class="label">Time</td>       <td class="input"> <input type="text" ng-model="time_of_day"></td></tr> 
-	       <tr><td class="label">Destination</td> <td class="input"> <input type="text" ng-model="destination2"></td> 
-	       <td class="label">Occupation</td> <td class="input"><input type="text" ng-model="occupation"></td> 
-	       <td class="label">Adjective</td>  <td class="input"><input type="text" ng-model="adjective2"></td></tr> 
-	       <tr><td class="label">Alcohol </td>   <td class="input"><input type="text" ng-model="alcohol"></td>
-	       <td class="label">Adjective </td> <td class="input"><input type="text" ng-model="adjective3"></td></tr>
-	      
-	   </table>
+	  	<form name='userSubmit' ng-submit="submit()">
+	  	 <table>
+	       <tr><td class="label">Name</td><td class="input"><input type="text" name='handle'ng-model="data.handle"></td></tr>
+	       <tr><td class="label">Adjective</td>  <td class="input"><input type="text" name='adjective'ng-model="data.adjective"></td></tr> 
+	       <tr><td class="label">Time </td>      <td class="input"><input type="text" name='when'ng-model="data.when"></td></tr> 
+	       <tr><td class="label">Destination</td><td class="input"><input type="text" name='where'ng-model="data.where"></td></tr> 
+	       <tr><td class="label">Location</td>   <td class="input"><input type="text" name='place'ng-model="data.place"></td></tr> 
+	       <tr><td class="label">Time</td>       <td class="input"> <input type="text" name='when'ng-model="data.when"></td></tr> 
+	       <tr><td class="label">Destination</td> <td class="input"> <input type="text" name='where2'ng-model="data.where2"></td> 
+	       <tr><td class="label">Occupation</td> <td class="input"><input type="text" name='job'ng-model="data.job"></td></tr> 
+	       <tr><td class="label">Adjective</td>  <td class="input"><input type="text" name='adjective2'ng-model="data.adjective2"></td></tr> 
+	       <tr><td class="label">Alcohol </td>   <td class="input"><input type="text" name='alcohol'ng-model="data.alcohol"></td></tr>
+	       <tr><td class="label">Adjective </td> <td class="input"><input type="text" name='adjective3'ng-model="data.adjective3"></td></tr>
+	       <tr><td><button type='submit'>Submit</button></td></tr>
+	     </table>
+	  </form>
       </div>
-      <div class="button"ng-click="male()">Male name</div>
-       	<div class="button"ng-click="female()">Female name</div>
-      <div class="story">
+      
+      <div class="output {{outputVisable}}">
      
-         <p>{{character_name}} was just a small town {{girlboy}}, livin in a {{adjective}} world. {{heshe}} took a {{time_of_day}} train going {{destination}}. Just a city boy, born and raised in south {{location}}, {{heshe}} took a {{time_of_day}} train going {{destination2}}. </p> 
+         <p>{{data.handle}} was just a small town {{girlboy}}, livin in a {{data.adjective}} world. {{heshe}} took a {{data.when}} train going {{data.where}}. Just a city {{girlboy}}, born and raised in south {{data.place}}, {{heshe}} took a {{data.when}} train going {{data.where2}}. </p> 
  
-         <p>A {{occupation}} in a {{adjective2}} room. The smell of {{alcohol}} and {{adjective3}} perfume. For a smile they can share the night. It goes on and on and on.</p>
+         <p>A {{data.job}} in a {{data.adjective2}} room. The smell of {{data.alcohol}} and {{data.adjective3}} perfume. For a smile they can share the night. It goes on and on and on.</p>
+         <button ng-click="reset()">Reset</button>
       </div>
     </div>  
 </body>
