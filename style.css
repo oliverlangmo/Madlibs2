@@ -7,10 +7,8 @@
 
 }
 h1{
-	text-align: right;
-	padding-top: 134px;
-	padding-right: 220px;
-	margin:0 auto;
+	text-align: center;
+	
 }
 .words{
 	padding-top:350px;
@@ -18,38 +16,31 @@ h1{
 	display: block;
 	height: 200px;
 }
-.story{
-	top: 85%;
-	text-align: center;
-	border-top: 1px solid black;
 
-}
 
 .wrap{
 	border:2px solid black;
-}
-body{
-	margin: 0px;
-	padding:0px;
+	margin-left: auto;
+	margin-right:auto;
+	width:50em;
 }
 
 .label{
 	text-align: right;
 	padding-right: 10px;
 }
-.button { cursor: pointer; margin: 10px; padding: 10px; border: 1px solid black; width: 100px; }
-.button:hover { border: 1px solid green; }
 
- .output {
+
+.output {
    padding: 1em 0;
    clear: both;
   height: 0;
   opacity: 0;
   z-index: 10;
-  transition: opacity 1s, height 1s;
+  transition: opacity 1s height 1s;
   overflow: hidden;
- }
- .visable {
+}
+.visable {
  z-index: 100;
   opacity: 1;
   height: 515px;
