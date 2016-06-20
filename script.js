@@ -1,4 +1,4 @@
-var thisApp = angular.module('demo', [])
+var thisApp = angular.module('demo', []);
 
 
 
